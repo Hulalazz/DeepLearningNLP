@@ -14,11 +14,12 @@ t = Tokenizer()
 t.fit_on_texts(docs)
 
 #summarize learnings
-print(t.word_counts)
-print(t.document_count)
-print(t.word_index)
-print(t.word_docs)
+print("Word Counts: " + str(t.word_counts))
+print("Document Count: " + str(t.document_count))
+print("Word Index " + str(t.word_index))
+print("Word Docs: " + str(t.word_docs))
 
 #integer encode documents
 encoded_docs = t.texts_to_matrix(docs, mode='count')
+print("Integer encoded documents: \n")
 print(encoded_docs)
